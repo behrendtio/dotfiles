@@ -1,0 +1,8 @@
+[user]
+    name = Mario Behrendt
+    email = info@mario-behrendt.de
+[color]
+    ui = auto
+[branch "master"]
+    remote = origin
+    merge = refs/heads/master
