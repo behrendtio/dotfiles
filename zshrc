@@ -10,7 +10,10 @@ plugins=(git brew bundler cap gem node npm osx pow rails rails3 ruby rvm )
 source $ZSH/oh-my-zsh.sh
 
 # Set path
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
+export PATH=/Users/mario/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
+
+# Add dev environment startup alias
+alias dev="sudo nginx; mysql.server start; php-fpm"
 
 # Load rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
