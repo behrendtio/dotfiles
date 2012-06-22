@@ -17,3 +17,10 @@ alias dev="sudo nginx; mysql.server start; php-fpm"
 
 # Load rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+# Speed up git completion
+__git_files () { 
+    _wanted files expl 'local files' _files 
+}
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
