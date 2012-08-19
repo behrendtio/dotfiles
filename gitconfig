@@ -1,3 +1,6 @@
+[core]
+    autocrlf = input
+    editor = /usr/bin/vim
 [user]
 	name = Mario Behrendt
 	email = m.behrendt@bloopark.de

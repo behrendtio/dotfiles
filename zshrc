@@ -5,7 +5,7 @@ export ZSH=$HOME/.oh-my-zsh
 export ZSH_THEME="robbyrussell"
 
 # Load plugins
-plugins=(git brew bundler cap gem node npm osx pow rails rails3 ruby rvm )
+plugins=(git brew bundler cap gem node npm osx rails rails3 ruby rvm vagrant)
 
 source $ZSH/oh-my-zsh.sh
 
