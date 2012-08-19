@@ -2,8 +2,8 @@
     autocrlf = input
     editor = /usr/bin/vim
 [user]
-	name = Mario Behrendt
-	email = m.behrendt@bloopark.de
+    name = Mario Behrendt
+    email = m.behrendt@bloopark.de
 [color]
     ui = auto
 [branch "master"]
