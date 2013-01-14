@@ -1,9 +1,10 @@
 [core]
     autocrlf = input
     editor = /usr/bin/vim
+    excludesfile = ~/.gitignore
 [user]
     name = Mario Behrendt
-    email = m.behrendt@bloopark.de
+    email = m.behrendt@yanted.com
 [color]
     ui = auto
 [branch "master"]
