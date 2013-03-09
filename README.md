@@ -1,10 +1,11 @@
-# Mario Behrendt's dotfiles
+# My dotfiles
 
 ## Configured tools
 
 * Zsh/Oh-my-zsh
 * Git
 * Ack
+* Tmux
 
 ## Installation
 
