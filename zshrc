@@ -17,6 +17,12 @@ __git_files () {
     _wanted files expl 'local files' _files
 }
 
+# Huge history size
+export HISTSIZE=4096
+
+# Do not change tmux window title on `cd`
+DISABLE_AUTO_TITLE=true
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
