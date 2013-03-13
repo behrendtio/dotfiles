@@ -23,6 +23,10 @@ export HISTSIZE=4096
 # Do not change tmux window title on `cd`
 DISABLE_AUTO_TITLE=true
 
+# Disable flow control keys
+stty start undef
+stty stop undef
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
