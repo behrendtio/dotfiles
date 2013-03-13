@@ -2,6 +2,7 @@
     autocrlf = input
     editor = /usr/bin/vim
     excludesfile = ~/.gitignore
+    pager = cat
 [user]
     name = Mario Behrendt
     email = m.behrendt@yanted.com
