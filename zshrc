@@ -17,6 +17,11 @@ __git_files () {
     _wanted files expl 'local files' _files
 }
 
+# Set iTerm tab name to PWD
+function precmd() {
+  echo -ne "\e]1;${PWD##*/}\a"
+}
+
 # Huge history size
 export HISTSIZE=4096
 
