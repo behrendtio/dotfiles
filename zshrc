@@ -25,6 +25,9 @@ function precmd() {
 # Huge history size
 export HISTSIZE=4096
 
+# Source aliases
+source $HOME/.dotfiles/zsh/aliases
+
 # Do not change tmux window title on `cd`
 DISABLE_AUTO_TITLE=true
 
@@ -34,5 +37,7 @@ stty stop undef
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# Rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"

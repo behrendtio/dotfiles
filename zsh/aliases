@@ -1,0 +1,20 @@
+alias s='ag' # Always use 's' for search and use tool which is the fastest atm
+alias ni='npm i'
+alias v='vim'
+alias hl='heroku logs --tail --remote'
+alias hls='heroku logs --tail --remote staging'
+alias hlp='heroku logs --tail --remote production'
+alias vu='vagrant up'
+alias vh='vagrant halt'
+alias vs='vagrant ssh'
+alias n='node'
+alias pow='touch tmp/restart.txt'
+alias aliases='vim ~/.dotfiles/zsh/aliases'
+alias code='cd ~/Code'
+alias mux='tmux new -s'
+
+# Deploy staging and live
+alias ds='git push staging master'
+alias dl='git push production master'
+
+alias review='git diff master'
