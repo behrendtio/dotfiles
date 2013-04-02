@@ -1,11 +1,13 @@
 # My dotfiles
 
-## Configured tools
+## Includes
 
 * Zsh/Oh-my-zsh
+* Aliases
 * Git
 * Ack
 * Tmux
+* IRB
 
 ## Installation
 
