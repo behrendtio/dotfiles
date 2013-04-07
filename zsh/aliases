@@ -15,8 +15,8 @@ alias aliases='vim ~/.dotfiles/zsh/aliases'
 alias code='cd ~/Code'
 alias mux='tmux new -s'
 
-# Deploy staging and live
+# Deploy staging and production
 alias ds='git push staging master'
-alias dl='git push production master'
+alias dp='git push production master'
 
 alias review='git diff master'
