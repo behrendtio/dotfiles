@@ -36,3 +36,4 @@ alias mux='tmux new -s '
 
 # Git
 alias review='git diff master'
+alias gpm='git push origin master'
