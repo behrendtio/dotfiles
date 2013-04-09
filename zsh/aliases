@@ -1,22 +1,38 @@
+# General
 alias s='ag' # Always use 's' for search and use tool which is the fastest atm
-alias ni='npm i'
 alias v='vim'
+
+# Heroku
 alias hl='heroku logs --tail --remote'
 alias hls='heroku logs --tail --remote staging'
 alias hlp='heroku logs --tail --remote production'
 alias hos='heroku open --remote staging'
 alias hop='heroku open --remote production'
-alias vu='vagrant up'
-alias vh='vagrant halt'
-alias vs='vagrant ssh'
-alias n='node'
-alias pow='touch tmp/restart.txt'
-alias aliases='vim ~/.dotfiles/zsh/aliases'
-alias code='cd ~/Code'
-alias mux='tmux new -s'
 
-# Deploy staging and production
+# Deployment
 alias ds='git push staging master'
 alias dp='git push production master'
 
+# Ruby
+alias zt='zeus test spec'
+alias zc='zeus console'
+alias pow='touch tmp/restart.txt'
+
+# Vagrant
+alias vu='vagrant up'
+alias vh='vagrant halt'
+alias vs='vagrant ssh'
+
+# Node
+alias n='node'
+alias ni='npm i'
+
+# Filesystem
+alias aliases='vim ~/.dotfiles/zsh/aliases'
+alias code='cd ~/Code'
+
+# Tmux
+alias mux='tmux new -s '
+
+# Git
 alias review='git diff master'
