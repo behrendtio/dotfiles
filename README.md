@@ -17,6 +17,8 @@ $ cd ~/.dotfiles
 $ make
 ```
 
+Make sure to restart your shell afterwards (e.g. `exec $SHELL -l`).
+
 ## Vim
 
 See my separate [vim configuration](https://github.com/mbehrendt/vim) for more information.
