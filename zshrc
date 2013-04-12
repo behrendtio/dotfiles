@@ -25,8 +25,9 @@ function precmd() {
 # Huge history size
 export HISTSIZE=4096
 
-# Source aliases
+# Source aliases and functions
 source $HOME/.dotfiles/zsh/aliases
+source $HOME/.dotfiles/zsh/functions
 
 # Do not change tmux window title on `cd`
 DISABLE_AUTO_TITLE=true
