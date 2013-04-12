@@ -38,7 +38,8 @@ alias ni='npm i'
 
 # Filesystem
 alias aliases='vim ~/.dotfiles/zsh/aliases'
-alias code='cd ~/Code'
+alias l='ls -lrthG'
+alias la='ls -lrthGa'
 
 # Tmux
 alias mux='tmux new -s '
@@ -46,3 +47,4 @@ alias mux='tmux new -s '
 # Git
 alias review='git diff master'
 alias gpm='git push origin master'
+alias gg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
