@@ -5,7 +5,7 @@
     autocrlf = input
     editor = /usr/bin/vim
     excludesfile = ~/.gitignore
-    pager = cat
+    pager = less
 [user]
     name = Mario Behrendt
     email = m.behrendt@yanted.com
