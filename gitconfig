@@ -1,3 +1,6 @@
+[user]
+    name = Mario Behrendt
+    email = m.behrendt@yanted.com
 [core]
     autocrlf = input
     editor = /usr/bin/vim
@@ -12,4 +15,6 @@
     remote = origin
     merge = refs/heads/master
 [merge]
-  ff = only
+    ff = only
+[push]
+    default = current
