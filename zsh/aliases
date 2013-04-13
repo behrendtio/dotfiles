@@ -3,6 +3,7 @@ alias s='ag' # Always use 's' for search and use tool which is the fastest atm
 alias v='vim'
 
 # Heroku
+alias h='heroku'
 alias hl='heroku logs --tail --remote'
 alias hls='heroku logs --tail --remote staging'
 alias hlp='heroku logs --tail --remote production'
@@ -45,6 +46,7 @@ alias la='ls -lrthGa'
 alias mux='tmux new -s '
 
 # Git
+alias g='g' # Overrides g alias from zsh with self defined function g()
 alias review='git diff master'
 alias gpm='git push origin master'
 alias gg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"

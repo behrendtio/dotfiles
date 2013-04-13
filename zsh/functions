@@ -1,3 +1,19 @@
 function code {
   cd ~/Code/$1
 }
+
+function g {
+  if [[ $# > 0 ]]
+  then
+    git $@
+  else
+    git status
+  fi
+}
+
+# Complete g like git
+compdef g=git
+
+function commands {
+  history | awk '{a[$2]++}END{for(i in a){print a[i] " " i}}' | sort -rn | head
+}
