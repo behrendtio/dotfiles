@@ -41,6 +41,7 @@ alias ni='npm i'
 alias aliases='vim ~/.dotfiles/zsh/aliases'
 alias l='ls -lrthG'
 alias la='ls -lrthGa'
+alias dot='cd ~/.dotfiles'
 
 # Tmux
 alias mux='tmux new -s '
@@ -50,3 +51,6 @@ alias g='g' # Overrides g alias from zsh with self defined function g()
 alias review='git diff master'
 alias gpm='git push origin master'
 alias gg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
+
+# Misc
+alias retag='ctags -R --exclude=.svn --exclude=.git --exclude=log --exclude=tmp *'
