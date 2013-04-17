@@ -43,6 +43,7 @@ alias aliases='vim ~/.dotfiles/zsh/aliases'
 alias l='ls -lrthG'
 alias la='ls -lrthGa'
 alias dot='cd ~/.dotfiles'
+alias sshconf='vim ~/.ssh/config'
 
 # Tmux
 alias mux='tmux new -s '
