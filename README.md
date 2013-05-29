@@ -12,7 +12,7 @@
 ## Installation
 
 ``` bash
-$ git clone https://github.com/behrendtio/.dotfiles.git ~/.dotfiles
+$ git clone https://github.com/behrendtio/dotfiles.git ~/.dotfiles
 $ cd ~/.dotfiles
 $ make
 ```
