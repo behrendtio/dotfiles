@@ -10,7 +10,7 @@ plugins=(bundler git heroku brew cap gem node npm osx rbenv rvm rake rails rails
 source $ZSH/oh-my-zsh.sh
 
 # Set path
-export PATH=/Users/mario/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
+export PATH=/Users/mario/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
 
 # Speed up git completion
 __git_files () {
