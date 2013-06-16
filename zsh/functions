@@ -2,6 +2,13 @@ function code {
   cd ~/Code/$1
 }
 
+_code() {
+  compadd `ls ~/Code`
+}
+
+# Completion for code() function
+compdef _code code
+
 function g {
   if [[ $# > 0 ]]
   then
