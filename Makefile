@@ -6,6 +6,7 @@ install:
 	@ln -fs $(BASEDIR)/zshrc ~/.zshrc
 	@ln -fs $(BASEDIR)/ackrc ~/.ackrc
 	@ln -fs $(BASEDIR)/irbrc ~/.irbrc
+	@ln -fs $(BASEDIR)/gemrc ~/.gemrc
 	@ln -fs $(BASEDIR)/tmux.conf ~/.tmux.conf
 
 .PHONY: install
