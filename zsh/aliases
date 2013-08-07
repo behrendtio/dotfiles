@@ -34,6 +34,7 @@ alias pow='touch tmp/restart.txt'
 alias vu='vagrant up'
 alias vh='vagrant halt'
 alias vs='vagrant ssh'
+alias vd='vagrant suspend'
 
 # Node
 alias n='node'
@@ -45,6 +46,7 @@ alias l='ls -lrthG'
 alias la='ls -lrthGa'
 alias dot='cd ~/.dotfiles'
 alias sshconf='vim ~/.ssh/config'
+alias c='code'
 
 # Tmux
 alias mux='tmux new -s '
