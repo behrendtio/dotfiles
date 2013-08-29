@@ -23,7 +23,7 @@ alias ds='git push staging master'
 alias dp='git push production master'
 
 # Ruby
-alias zs='zeus start'
+alias zs='rm -f .zeus.sock && zeus start'
 alias zt='zeus test spec'
 alias zc='zeus console'
 alias zg='zeus generate'
