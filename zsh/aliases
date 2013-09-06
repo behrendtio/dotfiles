@@ -1,5 +1,5 @@
 # General
-alias s='ag -i -C 2' # Always use 's' for search and use tool which is the fastest atm
+alias s='ag -i -C 2 --stats -Q' # Always use 's' for search and use tool which is the fastest atm
 alias vim='mvim -v'
 alias v='vim'
 alias t='tail -f -n `expr $LINES / 2` '
