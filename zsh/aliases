@@ -50,7 +50,8 @@ alias sshconf='vim ~/.ssh/config'
 alias c='code'
 
 # Tmux
-alias mux='tmux new -s '
+alias mux='tmux new -s'
+alias ta='tmux attach -t'
 
 # Git
 alias g='g' # Overrides g alias from zsh with self defined function g()
