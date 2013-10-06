@@ -36,6 +36,9 @@ DISABLE_AUTO_TITLE=true
 stty start undef
 stty stop undef
 
+# Set $EDITOR
+export EDITOR='vim'
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
