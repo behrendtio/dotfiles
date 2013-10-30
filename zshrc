@@ -39,6 +39,12 @@ stty stop undef
 # Set $EDITOR
 export EDITOR='vim'
 
+# Set $GOPATH
+export GOPATH=$HOME/Code/go
+
+# Add go bin path to $PATH
+export PATH="$GOPATH/bin:$PATH"
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
