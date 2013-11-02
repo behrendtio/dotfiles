@@ -50,6 +50,7 @@ alias sshconf='vim ~/.ssh/config'
 alias c='code'
 
 # Tmux
+alias tmux='tmux -2'
 alias mux='tmux new -s'
 alias ta='tmux attach -t'
 
