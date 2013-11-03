@@ -4,6 +4,9 @@ export ZSH=$HOME/.oh-my-zsh
 # Set theme
 export ZSH_THEME="miloshadzic"
 
+# Add a few things to the path
+export PATH="$HOME/bin:/usr/local/share/npm/bin:$PATH"
+
 # Rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
