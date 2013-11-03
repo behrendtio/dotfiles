@@ -4,6 +4,10 @@ export ZSH=$HOME/.oh-my-zsh
 # Set theme
 export ZSH_THEME="miloshadzic"
 
+# Rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
 # Load plugins
 plugins=(bundler git heroku brew cap gem node npm osx rbenv rvm rake rails rails3 vagrant)
 
@@ -47,7 +51,3 @@ export PATH="$GOPATH/bin:$PATH"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-
-# Rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
