@@ -50,7 +50,7 @@ alias sshconf='vim ~/.ssh/config'
 alias c='code'
 
 # Tmux
-alias tmux='tmux -2'
+alias tmux='TERM=screen-256color-bce tmux -2' # Better color support
 alias mux='tmux new -s'
 alias ta='tmux attach -t'
 
