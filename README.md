@@ -8,6 +8,7 @@
 * Ack
 * Tmux
 * IRB
+* Terminator
 
 ## Installation
 
