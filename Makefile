@@ -8,5 +8,7 @@ install:
 	@ln -fs $(BASEDIR)/irbrc ~/.irbrc
 	@ln -fs $(BASEDIR)/gemrc ~/.gemrc
 	@ln -fs $(BASEDIR)/tmux.conf ~/.tmux.conf
+	@mkdir -p ~/.config/terminator
+	@ln -fs $(BASEDIR)/terminator ~/.config/terminator/config
 
 .PHONY: install
