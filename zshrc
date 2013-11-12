@@ -16,6 +16,9 @@ plugins=(bundler git heroku brew cap gem node npm osx rbenv rvm rake rails rails
 
 source $ZSH/oh-my-zsh.sh
 
+# Tmuxinator completion
+source ~/.dotfiles/completion/tmuxinator.zsh
+
 # Speed up git completion
 __git_files () {
     _wanted files expl 'local files' _files
