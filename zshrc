@@ -12,7 +12,7 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 # Load plugins
-plugins=(bundler git heroku brew cap gem node npm osx rbenv rvm rake rails rails3 vagrant)
+plugins=(bundler git heroku brew cap rbenv rake rails)
 
 source $ZSH/oh-my-zsh.sh
 
