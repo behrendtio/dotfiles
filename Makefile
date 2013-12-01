@@ -10,5 +10,6 @@ install:
 	@ln -fs $(BASEDIR)/tmux.conf ~/.tmux.conf
 	@mkdir -p ~/.config/terminator
 	@ln -fs $(BASEDIR)/terminator ~/.config/terminator/config
+	@ln -fs $(BASEDIR)/psqlrc ~/.psqlrc
 
 .PHONY: install
