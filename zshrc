@@ -8,7 +8,7 @@ export ZSH_THEME="miloshadzic"
 export PATH="$HOME/bin:/usr/local/share/npm/bin:$PATH"
 
 # Rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/.rbenv/shims:$PATH"
 eval "$(rbenv init -)"
 
 # Load plugins
