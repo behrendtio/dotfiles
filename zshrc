@@ -8,7 +8,7 @@ export ZSH_THEME="miloshadzic"
 export PATH="$HOME/bin:/usr/local/share/npm/bin:$PATH"
 
 # Rbenv
-export PATH="$HOME/.rbenv/shims:$PATH"
+export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH"
 eval "$(rbenv init -)"
 
 # Load plugins
@@ -42,6 +42,9 @@ DISABLE_AUTO_TITLE=true
 # Disable flow control keys
 stty start undef
 stty stop undef
+
+# English!
+export LANG="en_US.UTF-8"
 
 # Set $EDITOR
 export EDITOR='vim'
