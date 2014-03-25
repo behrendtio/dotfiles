@@ -5,7 +5,7 @@ export ZSH=$HOME/.oh-my-zsh
 export ZSH_THEME="miloshadzic"
 
 # Add a few things to the path
-export PATH="$HOME/bin:/usr/local/share/npm/bin:$PATH"
+export PATH="$HOME/bin:/usr/local/share/npm/bin:/usr/local/bin:$PATH"
 
 # Rbenv
 export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH"
