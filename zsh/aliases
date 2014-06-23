@@ -34,6 +34,7 @@ alias zg='zeus generate'
 alias zdb='zeus dbconsole'
 alias zr='zeus rake'
 alias pow='touch tmp/restart.txt'
+alias migrate='rake db:migrate db:rollback && rake db:migrate'
 
 # Vagrant
 alias vu='vagrant up'
@@ -58,6 +59,7 @@ alias c='code'
 alias tmux='TERM=screen-256color-bce tmux -2' # Better color support
 alias mux='tmux new -s'
 alias ta='tmux attach -t'
+alias tat='tmux new-session -As `basename $PWD`'
 
 # Git
 alias g='g' # Overrides g alias from zsh with self defined function g()
@@ -71,3 +73,5 @@ alias gsp='git stash pop'
 # Misc
 alias ctags="`brew --prefix`/bin/ctags"
 alias retag='ctags -R --exclude=.svn --exclude=.git --exclude=log --exclude=tmp *'
+alias cpd='cap production deploy'
+alias csd='cap staging deploy'
