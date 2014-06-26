@@ -24,3 +24,9 @@ compdef g=git
 function commands {
   history | awk '{a[$2]++}END{for(i in a){print a[i] " " i}}' | sort -rn | head
 }
+
+function mux() {
+  tmux new-session -c ~/Code/$1 -n 'editor' -s $1 -d
+  tmux new-window -c ~/Code/$1 -n 'shell' -t $1
+  tmux -2 attach-session -d
+}
