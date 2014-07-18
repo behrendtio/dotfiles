@@ -57,8 +57,6 @@ alias c='code'
 
 # Tmux
 alias tmux='TERM=screen-256color-bce tmux -2' # Better color support
-alias ta='tmux attach -t'
-alias tat='tmux new-session -As `basename $PWD`'
 
 # Git
 alias g='g' # Overrides g alias from zsh with self defined function g()
