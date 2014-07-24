@@ -72,3 +72,4 @@ alias ctags="`brew --prefix`/bin/ctags"
 alias retag='ctags -R --exclude=.svn --exclude=.git --exclude=log --exclude=tmp *'
 alias cpd='cap production deploy'
 alias csd='cap staging deploy'
+alias ip='curl ifconfig.me/ip'
