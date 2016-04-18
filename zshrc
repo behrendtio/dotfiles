@@ -11,13 +11,13 @@ export PATH="$HOME/bin:/usr/local/share/npm/bin:/usr/local/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH"
 eval "$(rbenv init -)"
 
+# Docker
+#eval "$(docker-machine env default)"
+
 # Load plugins
-plugins=(bundler git heroku brew cap rbenv rake rails)
+plugins=(bundler git brew cap rbenv rake rails)
 
 source $ZSH/oh-my-zsh.sh
-
-# Tmuxinator completion
-source ~/.dotfiles/completion/tmuxinator.zsh
 
 # Speed up git completion
 __git_files () {
@@ -49,14 +49,8 @@ export LANG="en_US.UTF-8"
 # Set $EDITOR
 export EDITOR='vim'
 
-# Set $GOPATH
-export GOPATH=$HOME/Code/go
+# The next line updates PATH for the Google Cloud SDK.
+source '/Users/mario/Code/google-cloud-sdk/path.zsh.inc'
 
-# Add go bin path to $PATH
-export PATH="$GOPATH/bin:$PATH"
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-export NVM_DIR="/Users/mario/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+# The next line enables shell command completion for gcloud.
+source '/Users/mario/Code/google-cloud-sdk/completion.zsh.inc'

@@ -8,31 +8,11 @@ fi
 alias v='vim'
 alias t='tail -f -n `expr $LINES / 2` '
 
-# Heroku
-alias h='heroku'
-alias hl='heroku logs --tail --remote'
-alias hls='heroku logs --tail --remote staging'
-alias hlp='heroku logs --tail --remote production'
-alias hos='heroku open --remote staging'
-alias hop='heroku open --remote production'
-alias hcs='heroku run rails console --remote staging'
-alias hcp='heroku run rails console --remote production'
-alias hmsy='heroku maintenance:on --remote staging'
-alias hmsn='heroku maintenance:off --remote staging'
-alias hmpy='heroku maintenance:on --remote production'
-alias hmpn='heroku maintenance:off --remote production'
-
 # Deployment
 alias ds='git push staging master'
 alias dp='git push production master'
 
 # Ruby
-alias zs='rm -f .zeus.sock && zeus start'
-alias zt='zeus test spec'
-alias zc='zeus console'
-alias zg='zeus generate'
-alias zdb='zeus dbconsole'
-alias zr='zeus rake'
 alias pow='touch tmp/restart.txt'
 alias migrate='rake db:migrate db:rollback && rake db:migrate'
 
@@ -43,16 +23,11 @@ alias vs='vagrant ssh'
 alias vd='vagrant suspend'
 alias vp='vagrant provision'
 
-# Node
-alias n='node'
-alias ni='npm i'
-
 # Filesystem
 alias aliases='vim ~/.dotfiles/zsh/aliases'
 alias l='ls -lrthG'
 alias la='ls -lrthGa'
 alias dot='cd ~/.dotfiles'
-alias sshconf='vim ~/.ssh/config'
 alias c='code'
 
 # Tmux

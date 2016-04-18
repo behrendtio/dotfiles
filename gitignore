@@ -10,8 +10,8 @@
 .Trashes
 Icon\?
 
-# Magento
-.modman/
+# Node
+/node_modules
 
 # Tags
 /tags
