@@ -11,11 +11,8 @@ export PATH="$HOME/bin:/usr/local/share/npm/bin:/usr/local/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH"
 eval "$(rbenv init -)"
 
-# Docker
-#eval "$(docker-machine env default)"
-
 # Load plugins
-plugins=(bundler git brew cap rbenv rake rails)
+plugins=(bundler docker git brew cap rbenv rake rails)
 
 source $ZSH/oh-my-zsh.sh
 
