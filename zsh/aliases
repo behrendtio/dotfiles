@@ -30,6 +30,9 @@ alias la='ls -lrthGa'
 alias dot='cd ~/.dotfiles'
 alias c='code'
 
+# Elixir
+alias e='elixir'
+
 # Tmux
 alias tmux='TERM=screen-256color-bce tmux -2' # Better color support
 
