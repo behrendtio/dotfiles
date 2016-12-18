@@ -46,8 +46,5 @@ export LANG="en_US.UTF-8"
 # Set $EDITOR
 export EDITOR='vim'
 
-# The next line updates PATH for the Google Cloud SDK.
-source '/Users/mario/Code/google-cloud-sdk/path.zsh.inc'
-
-# The next line enables shell command completion for gcloud.
-source '/Users/mario/Code/google-cloud-sdk/completion.zsh.inc'
+export NVM_DIR="/Users/mario/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
