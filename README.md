@@ -5,10 +5,11 @@
 * Zsh/Oh-my-zsh
 * Aliases
 * Git
-* Ack
+* PostgreSQL
 * Tmux
 * IRB
-* Terminator
+* Rubygems
+* Pry
 
 ## Installation
 

@@ -8,21 +8,6 @@ fi
 alias v='vim'
 alias t='tail -f -n `expr $LINES / 2` '
 
-# Deployment
-alias ds='git push staging master'
-alias dp='git push production master'
-
-# Ruby
-alias pow='touch tmp/restart.txt'
-alias migrate='rake db:migrate db:rollback && rake db:migrate'
-
-# Vagrant
-alias vu='vagrant up'
-alias vh='vagrant halt'
-alias vs='vagrant ssh'
-alias vd='vagrant suspend'
-alias vp='vagrant provision'
-
 # Filesystem
 alias aliases='vim ~/.dotfiles/zsh/aliases'
 alias l='ls -lrthG'
@@ -30,26 +15,25 @@ alias la='ls -lrthGa'
 alias dot='cd ~/.dotfiles'
 alias c='code'
 
-# Elixir
-alias e='elixir'
-
 # Tmux
 alias tmux='TERM=screen-256color-bce tmux -2' # Better color support
 
 # Git
 alias g='g' # Overrides g alias from zsh with self defined function g()
-alias review='git diff master'
-alias gpm='git push origin master'
+alias gp='git push'
+alias gco='git checkout'
+alias gd='git diff'
 alias gg="git log --pretty=format:'%Cred%h%Creset - %s %Cgreen(%an, %cr)%Creset' --abbrev-commit --date=relative"
 alias ggg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
 alias gs='git stash'
 alias gsp='git stash pop'
 
 # Misc
+alias bi='bundle install'
 alias ctags="`brew --prefix`/bin/ctags"
 alias retag='ctags -R --exclude=.svn --exclude=.git --exclude=log --exclude=tmp *'
 alias cpd='cap production deploy'
 alias csd='cap staging deploy'
 alias cpdr='cap production deploy && cap production deploy:restart'
 alias csdr='cap staging deploy && cap staging deploy:restart'
-alias ip='curl ifconfig.me/ip'
+alias codepush='code-push release-react slickcoach ios'

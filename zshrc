@@ -12,7 +12,7 @@ export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH"
 eval "$(rbenv init -)"
 
 # Load plugins
-plugins=(bundler docker git brew cap rbenv rake rails)
+plugins=(bundler git rbenv rake rails)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -41,10 +41,7 @@ stty start undef
 stty stop undef
 
 # English!
-export LANG="en_US.UTF-8"
+export LANG="en_GB.UTF-8"
 
 # Set $EDITOR
-export EDITOR='vim'
-
-export NVM_DIR="/Users/mario/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+export EDITOR='mvim -v'
