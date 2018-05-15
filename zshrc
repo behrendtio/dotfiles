@@ -2,7 +2,7 @@
 export ZSH=$HOME/.oh-my-zsh
 
 # Set theme
-export ZSH_THEME="miloshadzic"
+export ZSH_THEME="simple"
 
 # Add a few things to the path
 export PATH="$HOME/bin:/usr/local/share/npm/bin:/usr/local/bin:$PATH"
