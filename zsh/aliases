@@ -37,3 +37,6 @@ alias csd='cap staging deploy'
 alias cpdr='cap production deploy && cap production deploy:restart'
 alias csdr='cap staging deploy && cap staging deploy:restart'
 alias codepush='code-push release-react slickcoach ios'
+
+# Claude Code
+alias cc='claude --dangerously-skip-permissions'

@@ -28,3 +28,21 @@ function commands {
 function ta() {
   tmux new-session -c ~/Code/$1 -As $1
 }
+
+function gwtc() {
+  local branch_name="$1"
+  local base_branch="${2:-master}"
+  local current_folder=$(basename "$PWD")
+  local target_dir="../${current_folder}.${branch_name}"
+
+  if [[ -z "$branch_name" ]]; then
+    echo "Usage: gwtc <new-branch-name> [base-branch]"
+    return 1
+  fi
+
+  # Create worktree: ../current.branch
+  git worktree add -b "$branch_name" "$target_dir" "$base_branch" || return 1
+
+  # Navigate and open Claude
+  cd "$target_dir" && cc
+}
