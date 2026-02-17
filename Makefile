@@ -9,5 +9,6 @@ install:
 	@ln -fs $(BASEDIR)/gemrc ~/.gemrc
 	@ln -fs $(BASEDIR)/tmux.conf ~/.tmux.conf
 	@ln -fs $(BASEDIR)/psqlrc ~/.psqlrc
+	@ln -fs $(BASEDIR)/ghostty ~/.config/ghostty/config
 
 .PHONY: install
