@@ -1,0 +1,29 @@
+font-family = "Hack Nerd Font Mono"
+window-subtitle=false
+macos-titlebar-proxy-icon=hidden
+macos-titlebar-style=tabs
+title=" "
+theme = "dracula"
+#theme = light:Catppuccin Latte,dark:Catppuccin Mocha
+
+background-opacity = 0.9
+background-blur-radius = 20
+
+keybind = cmd+shift+e=equalize_splits
+
+# Send Meta+N for Cmd+N (for tmux window switching)
+#keybind = super+digit_1=text:\x1b1
+#keybind = super+digit_2=text:\x1b2
+#keybind = super+digit_3=text:\x1b3
+#keybind = super+digit_4=text:\x1b4
+#keybind = super+digit_5=text:\x1b5
+#keybind = super+digit_6=text:\x1b6
+#keybind = super+digit_7=text:\x1b7
+#keybind = super+digit_8=text:\x1b8
+#keybind = super+digit_9=text:\x1b9
+
+# Send Alt+Arrow for Cmd+Option+Arrow (for tmux pane switching)
+#keybind = super+alt+arrow_left=text:\x1b[1;3D
+#keybind = super+alt+arrow_right=text:\x1b[1;3C
+#keybind = super+alt+arrow_up=text:\x1b[1;3A
+#keybind = super+alt+arrow_down=text:\x1b[1;3B
