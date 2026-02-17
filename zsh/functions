@@ -51,3 +51,28 @@ function gwtc() {
   # Navigate and open Claude
   cd "$target_dir" && cc
 }
+
+function gwtr() {
+  local current_worktree=$(git rev-parse --show-toplevel 2>/dev/null)
+  local git_dir=$(git rev-parse --git-dir 2>/dev/null)
+  local common_dir=$(git rev-parse --git-common-dir 2>/dev/null)
+  local main_worktree=$(git worktree list --porcelain 2>/dev/null | awk '/^worktree /{print substr($0,10); exit}')
+
+  if [[ -z "$current_worktree" ]]; then
+    echo "Not inside a git repository."
+    return 1
+  fi
+
+  if [[ "$git_dir" == "$common_dir" ]]; then
+    echo "You're in the main worktree. Refusing to remove it."
+    return 1
+  fi
+
+  if [[ -z "$main_worktree" ]]; then
+    echo "Could not determine main worktree."
+    return 1
+  fi
+
+  cd "$main_worktree" || return 1
+  git worktree remove "$current_worktree"
+}
