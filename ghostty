@@ -4,16 +4,18 @@ window-subtitle=false
 macos-titlebar-proxy-icon=hidden
 macos-titlebar-style=tabs
 title=" "
-theme = "dracula"
 font-thicken = true
-background-opacity = 0.9
+#background-opacity = 0.9
 background-blur-radius = 20
 cursor-style = bar
 cursor-style-blink = true
 cursor-opacity = 0.8
+#unfocused-split-opacity = 0.15
 
 #adjust-cell-height = 2
-#theme = light:Catppuccin Latte,dark:Catppuccin Mocha
+
+#theme = "dracula"
+theme = light:Catppuccin Latte,dark:Catppuccin Mocha
 
 # Behaviour
 mouse-hide-while-typing = true
