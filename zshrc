@@ -5,10 +5,27 @@ export ZSH=$HOME/.oh-my-zsh
 export ZSH_THEME="simple"
 
 # Add a few things to the path
-export PATH="$HOME/bin:/usr/local/share/npm/bin:/usr/local/bin:$PATH"
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export BUN_INSTALL="$HOME/.bun"
+
+typeset -U path PATH
+path=(
+  "$HOME/bin"
+  "$HOME/.local/bin"
+  "$HOME/.opencode/bin"
+  "$BUN_INSTALL/bin"
+  "$HOME/.rbenv/bin"
+  "$HOME/.rbenv/shims"
+  "/opt/homebrew/opt/openjdk/bin"
+  "/opt/homebrew/bin"
+  "/usr/local/share/npm/bin"
+  "/usr/local/bin"
+  "$ANDROID_HOME/emulator"
+  "$ANDROID_HOME/platform-tools"
+  "$path[@]"
+)
 
 # Rbenv
-export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH"
 eval "$(rbenv init -)"
 
 # Load plugins
@@ -19,11 +36,6 @@ source $ZSH/oh-my-zsh.sh
 # Speed up git completion
 __git_files () {
     _wanted files expl 'local files' _files
-}
-
-# Set iTerm tab name to PWD
-function precmd() {
-  echo -ne "\e]1;${PWD##*/}\a"
 }
 
 # Huge history size
@@ -44,4 +56,24 @@ stty stop undef
 export LANG="en_GB.UTF-8"
 
 # Set $EDITOR
-export EDITOR='mvim -v'
+export EDITOR='zed'
+
+export NVM_DIR="$HOME/.nvm"
+load-nvm() {
+  unset -f nvm node npm npx yarn pnpm corepack load-nvm
+  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+  [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
+}
+
+nvm() { load-nvm; nvm "$@"; }
+node() { load-nvm; node "$@"; }
+npm() { load-nvm; npm "$@"; }
+npx() { load-nvm; npx "$@"; }
+yarn() { load-nvm; yarn "$@"; }
+pnpm() { load-nvm; pnpm "$@"; }
+corepack() { load-nvm; corepack "$@"; }
+
+. "$(brew --prefix asdf)/libexec/asdf.sh"
+
+# bun completions
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
