@@ -3,7 +3,7 @@
     email = 251007+behrendtio@users.noreply.github.com
 [core]
     autocrlf = input
-    editor = /usr/bin/vim
+    editor = /usr/bin/nvim
     excludesfile = ~/.gitignore
     pager = less
 [color]
@@ -15,3 +15,9 @@
     default = current
 [pull]
     rebase = true
+[credential "https://github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential

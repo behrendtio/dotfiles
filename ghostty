@@ -15,12 +15,13 @@ background-blur-radius = 20
 cursor-style-blink = true
 adjust-cell-height = 2
 #background-opacity = 0.9
-#cursor-style = bar
+shell-integration-features = no-cursor
+cursor-style = block
 #cursor-opacity = 0.8
 unfocused-split-opacity = 1
 
-theme = "dracula"
-#theme = light:Catppuccin Latte,dark:Catppuccin Mocha
+#theme = "dracula"
+theme = light:Catppuccin Latte,dark:Catppuccin Mocha
 
 # Behaviour
 mouse-hide-while-typing = true
@@ -36,3 +37,6 @@ quick-terminal-animation-duration = 0.15
 # Keyboard shortcuts
 keybind = cmd+shift+e=equalize_splits
 keybind = cmd+shift+g=toggle_quick_terminal
+
+# Allow (right) Alt to come through (for Codex reasoning effort changes)
+macos-option-as-alt = right

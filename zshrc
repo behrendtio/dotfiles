@@ -59,21 +59,37 @@ export LANG="en_GB.UTF-8"
 export EDITOR='zed'
 
 export NVM_DIR="$HOME/.nvm"
+NVM_LAZY_COMMANDS=(nvm node npm npx yarn pnpm corepack codex)
+
 load-nvm() {
-  unset -f nvm node npm npx yarn pnpm corepack load-nvm
+  unset -f "${NVM_LAZY_COMMANDS[@]}" load-nvm
+  unset NVM_LAZY_COMMANDS
   [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
   [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
 }
 
-nvm() { load-nvm; nvm "$@"; }
-node() { load-nvm; node "$@"; }
-npm() { load-nvm; npm "$@"; }
-npx() { load-nvm; npx "$@"; }
-yarn() { load-nvm; yarn "$@"; }
-pnpm() { load-nvm; pnpm "$@"; }
-corepack() { load-nvm; corepack "$@"; }
+for command in "${NVM_LAZY_COMMANDS[@]}"; do
+  eval "$command() { load-nvm; $command \"\$@\"; }"
+done
+unset command
 
-. "$(brew --prefix asdf)/libexec/asdf.sh"
+command_not_found_handler() {
+  local command="$1"
+  shift
+
+  if typeset -f load-nvm >/dev/null; then
+    load-nvm
+    if command -v "$command" >/dev/null 2>&1; then
+      "$command" "$@"
+      return $?
+    fi
+  fi
+
+  print -u2 "zsh: command not found: $command"
+  return 127
+}
+
+eval "$(mise activate zsh)"
 
 # bun completions
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
