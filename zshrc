@@ -14,8 +14,6 @@ path=(
   "$HOME/.local/bin"
   "$HOME/.opencode/bin"
   "$BUN_INSTALL/bin"
-  "$HOME/.rbenv/bin"
-  "$HOME/.rbenv/shims"
   "/opt/homebrew/opt/openjdk/bin"
   "/opt/homebrew/bin"
   "/usr/local/share/npm/bin"
@@ -25,11 +23,8 @@ path=(
   "$path[@]"
 )
 
-# Rbenv
-eval "$(rbenv init -)"
-
 # Load plugins
-plugins=(bundler git rbenv rake rails)
+plugins=(bundler git rake rails)
 
 source $ZSH/oh-my-zsh.sh
 
