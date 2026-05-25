@@ -3,10 +3,9 @@ tap "facebook/fb"
 mas "amphetamine", id: 937984704
 mas "xcode", id: 497799835
 
-cask "1password"
 cask "codex"
-#cask "cursor"
 #cask "datagrip"
+cask "droid"
 #cask "ghostty"
 cask "google-chrome"
 cask "google-drive"
@@ -18,6 +17,7 @@ cask "slack"
 cask "vlc"
 cask "warp"
 cask "wispr-flow"
+cask "zed"
 
 brew "anomalyco/tap/opencode"
 brew "az"
