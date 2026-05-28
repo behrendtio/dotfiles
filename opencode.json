@@ -1,0 +1,28 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "plugin": [
+    "@warp-dot-dev/opencode-warp"
+  ],
+  "permission": {
+    "external_directory": {
+      "/tmp/**": "allow",
+      "**/.agent.env": "allow"
+    }
+  },
+  "lsp": true,
+  "mcp": {
+    "context7": {
+      "type": "local",
+      "command": ["npx", "-y", "@upstash/context7-mcp@latest"],
+      "enabled": true
+    },
+    "ios-sim": {
+      "type": "local",
+      "command": ["npx", "-y", "ios-simulator-mcp"],
+      "enabled": true
+    }
+  },
+  "experimental": {
+    "disable_paste_summary": true
+  }
+}

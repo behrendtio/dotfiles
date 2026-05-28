@@ -9,6 +9,9 @@ install:
 	@ln -fs $(BASEDIR)/gemrc ~/.gemrc
 	@ln -fs $(BASEDIR)/tmux.conf ~/.tmux.conf
 	@ln -fs $(BASEDIR)/psqlrc ~/.psqlrc
+	@mkdir -p ~/.config/ghostty
 	@ln -fs $(BASEDIR)/ghostty ~/.config/ghostty/config
+	@mkdir -p ~/.config/opencode
+	@ln -fs $(BASEDIR)/opencode.json ~/.config/opencode/opencode.json
 
 .PHONY: install
