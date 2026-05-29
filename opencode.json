@@ -4,8 +4,13 @@
     "@warp-dot-dev/opencode-warp"
   ],
   "permission": {
+    "read": {
+      "**/.agent.env": "allow"
+    },
     "external_directory": {
       "/tmp/**": "allow",
+      "~/.dotfiles/**": "allow",
+      "~/.config/**": "allow",
       "**/.agent.env": "allow"
     }
   },
