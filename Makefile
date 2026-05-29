@@ -13,5 +13,6 @@ install:
 	@ln -fs $(BASEDIR)/ghostty ~/.config/ghostty/config
 	@mkdir -p ~/.config/opencode
 	@ln -fs $(BASEDIR)/opencode.json ~/.config/opencode/opencode.json
+	@ln -fs $(BASEDIR)/opencode_tui.json ~/.config/opencode/tui.json
 
 .PHONY: install
