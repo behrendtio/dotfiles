@@ -10,12 +10,12 @@ font-size = 13
 window-subtitle=false
 macos-titlebar-proxy-icon=hidden
 macos-titlebar-style=tabs
-title=" "
+#title=" "
 background-blur-radius = 20
 cursor-style-blink = true
 adjust-cell-height = 2
 #background-opacity = 0.9
-shell-integration-features = no-cursor
+shell-integration-features = no-cursor,no-title
 cursor-style = block
 #cursor-opacity = 0.8
 unfocused-split-opacity = 1
@@ -38,5 +38,11 @@ quick-terminal-animation-duration = 0.15
 keybind = cmd+shift+e=equalize_splits
 keybind = cmd+shift+g=toggle_quick_terminal
 
+# Free for Herdr workspace/agent prev/next (see ~/.config/herdr/config.toml)
+keybind = super+shift+[=unbind
+keybind = super+shift+]=unbind
+keybind = super+[=unbind
+keybind = super+]=unbind
+
 # Allow (right) Alt to come through (for Codex reasoning effort changes)
-macos-option-as-alt = right
+macos-option-as-alt = true

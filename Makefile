@@ -14,5 +14,11 @@ install:
 	@mkdir -p ~/.config/opencode
 	@ln -fs $(BASEDIR)/opencode.json ~/.config/opencode/opencode.json
 	@ln -fs $(BASEDIR)/opencode_tui.json ~/.config/opencode/tui.json
+	@mkdir -p ~/.pi/agent
+	@ln -fs $(BASEDIR)/pi/settings.json ~/.pi/agent/settings.json
+	@ln -fs $(BASEDIR)/pi/keybindings.json ~/.pi/agent/keybindings.json
+	@ln -fs $(BASEDIR)/pi/APPEND_SYSTEM.md ~/.pi/agent/APPEND_SYSTEM.md
+	@ln -fs $(BASEDIR)/pi/pi-statusbar-mario.json ~/.pi/agent/pi-statusbar-mario.json
+	@ln -fs $(BASEDIR)/pi/pi-btw.json ~/.pi/agent/pi-btw.json
 
 .PHONY: install

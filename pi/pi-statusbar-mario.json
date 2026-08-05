@@ -1,0 +1,24 @@
+{
+  "lines": [
+    {
+      "left": "{branch} {diff}",
+      "right": "{context} | {tokens} | {duration} | {cost}"
+    },
+    {
+      "left": "{model} ({thinking})",
+      "right": "{mcp} | {pr}"
+    }
+  ],
+  "separator": " | ",
+  "colors": {
+    "left": "text",
+    "right": "text",
+    "dim": "text",
+    "warning": "text",
+    "error": "text"
+  },
+  "contextThresholds": {
+    "warning": 70,
+    "error": 90
+  }
+}

@@ -36,6 +36,7 @@ function gwtc() {
   local worktrees_dir="$HOME/Code/worktrees"
   local folder_name="${branch_name//\//-}"
   local target_dir="${worktrees_dir}/${folder_name}"
+  local source_dir=$(git rev-parse --show-toplevel 2>/dev/null)
 
   if [[ -z "$base_branch" ]]; then
     base_branch="master"
@@ -46,9 +47,23 @@ function gwtc() {
     return 1
   fi
 
+  if [[ -z "$source_dir" ]]; then
+    echo "Not inside a git repository."
+    return 1
+  fi
+
   mkdir -p "$worktrees_dir" || return 1
 
   git worktree add -b "$branch_name" "$target_dir" "$base_branch" || return 1
+
+  local env_file relative_path relative_dir
+  while IFS= read -r -d '' env_file; do
+    relative_path="${env_file#$source_dir/}"
+    relative_dir="$(dirname "$relative_path")"
+
+    mkdir -p "$target_dir/$relative_dir" || return 1
+    cp -p "$env_file" "$target_dir/$relative_path" || return 1
+  done < <(find "$source_dir" -type f -name .env -print0)
 
   cd "$target_dir"
 }
