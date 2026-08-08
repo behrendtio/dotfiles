@@ -92,3 +92,38 @@ function gwtr() {
   cd "$main_worktree" || return 1
   git worktree remove "$current_worktree"
 }
+
+function hwt() {
+  emulate -L zsh
+  local name pane2 pane3 response worktree_dir
+
+  if (( $# != 1 )); then
+    print -u2 'usage: hwt <name>'
+    return 2
+  fi
+  if [[ ${HERDR_ENV:-0} != 1 ]]; then
+    print -u2 'hwt must be run inside a Herdr pane'
+    return 1
+  fi
+
+  name=$1
+  herdr tab rename "$HERDR_TAB_ID" "$name" >/dev/null || return
+
+  wt switch --create --no-hooks "$name" || return
+  worktree_dir=$PWD
+
+  response=$(herdr pane split --current --direction down --ratio 0.70 \
+    --cwd "$worktree_dir" --no-focus) || return
+  pane2=$(print -r -- "$response" | jq -er '.result.pane.pane_id') || return
+  herdr pane send-text "$pane2" 'wt run' >/dev/null || return
+
+  response=$(herdr pane split --pane "$pane2" --direction right --ratio 0.50 \
+    --cwd "$worktree_dir" --no-focus) || return
+  pane3=$(print -r -- "$response" | jq -er '.result.pane.pane_id') || return
+
+  herdr pane run "$pane3" \
+    'wt hook pre-start --foreground && wt hook post-start --foreground' \
+    >/dev/null || return
+
+  pi
+}

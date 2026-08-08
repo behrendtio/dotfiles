@@ -14,6 +14,8 @@ install:
 	@mkdir -p ~/.config/opencode
 	@ln -fs $(BASEDIR)/opencode.json ~/.config/opencode/opencode.json
 	@ln -fs $(BASEDIR)/opencode_tui.json ~/.config/opencode/tui.json
+	@mkdir -p ~/.config/hunk
+	@ln -fs $(BASEDIR)/hunk/config.toml ~/.config/hunk/config.toml
 	@mkdir -p ~/.pi/agent
 	@ln -fs $(BASEDIR)/pi/settings.json ~/.pi/agent/settings.json
 	@ln -fs $(BASEDIR)/pi/keybindings.json ~/.pi/agent/keybindings.json
