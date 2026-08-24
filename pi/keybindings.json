@@ -7,5 +7,6 @@
   ],
   "app.message.followUp": [
     "alt+enter"
-  ]
+  ],
+  "app.model.select": "alt+p"
 }

@@ -17,3 +17,6 @@ Icon\?
 /tags
 
 **/.claude/settings.local.json
+
+.pi-subagents/
+.playwright-mcp/

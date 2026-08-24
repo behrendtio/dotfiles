@@ -1,23 +1,41 @@
 {
-  "lastChangelogVersion": "0.83.0",
+  "lastChangelogVersion": "0.84.2",
   "theme": "catppuccin-latte/catppuccin-mocha",
   "packages": [
-    "../../Code/pi-statusbar-mario",
-    "npm:pi-pr-status",
+    {
+      "source": "../../Code/pi-statusbar-mario",
+      "extensions": [
+        "src/index.ts"
+      ]
+    },
+    {
+      "source": "npm:pi-pr-status",
+      "extensions": []
+    },
     "npm:pi-xai",
     "npm:pi-mcp-adapter",
-    "npm:pi-subagents",
-    "npm:pi-web-access",
     "git:github.com/otahontas/pi-coding-agent-catppuccin",
-    "npm:@diegopetrucci/pi-openai-fast",
     "npm:@juicesharp/rpiv-ask-user-question",
     "npm:pi-autoresearch",
     "npm:@narumitw/pi-btw",
     "npm:@zigai/pi-mention-skill",
-    "npm:@zigai/pi-message-highlights"
+    "npm:pi-chrome",
+    {
+      "source": "npm:@adrianapan/pikit",
+      "extensions": [
+        "agent/extensions/styled-outputs/index.ts",
+        "agent/extensions/chat-input/index.ts"
+      ]
+    },
+    "npm:pi-web-access",
+    "npm:pi-subagents",
+    "npm:@zigai/pi-message-highlights",
+    "git:github.com/algal/pi-openai-server-compaction",
+    "npm:pi-cursor-sdk",
+    "npm:codex-computer-use-mcp"
   ],
   "defaultProvider": "grok-build",
-  "defaultModel": "grok-4.5",
+  "defaultModel": "grok-4.6",
   "hideThinkingBlock": true,
   "editorPaddingX": 1,
   "outputPad": 1,
@@ -30,15 +48,20 @@
   "defaultProjectTrust": "always",
   "defaultThinkingLevel": "high",
   "enabledModels": [
-    "grok-build/grok-4.5",
-    "openai-codex/gpt-5.6-sol",
+    "grok-build/grok-4.6",
     "openai-codex/gpt-5.6-luna",
-    "openai-codex/gpt-5.6-terra"
+    "openai-codex/gpt-5.6-sol",
+    "cursor/fable-5@300k",
+    "cursor/opus-5@300k",
+    "opencode/deepseek-v4-flash-free",
+    "cursor/gpt-5.6-sol@272k",
+    "cursor/gpt-5.6-luna@272k"
   ],
   "compaction": {
     "enabled": true
   },
   "skillful": {
     "hiddenSkills": []
-  }
+  },
+  "tuiMode": "fullscreen"
 }
