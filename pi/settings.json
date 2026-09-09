@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "0.84.2",
+  "lastChangelogVersion": "0.84.4",
   "theme": "catppuccin-latte/catppuccin-mocha",
   "packages": [
     {
@@ -29,12 +29,10 @@
     },
     "npm:pi-web-access",
     "npm:pi-subagents",
-    "npm:@zigai/pi-message-highlights",
     "git:github.com/algal/pi-openai-server-compaction",
-    "npm:pi-cursor-sdk",
     "npm:codex-computer-use-mcp"
   ],
-  "defaultProvider": "grok-build",
+  "defaultProvider": "openai-codex",
   "defaultModel": "grok-4.6",
   "hideThinkingBlock": true,
   "editorPaddingX": 1,
@@ -46,16 +44,12 @@
   "quietStartup": true,
   "collapseChangelog": true,
   "defaultProjectTrust": "always",
-  "defaultThinkingLevel": "high",
+  "defaultThinkingLevel": "xhigh",
   "enabledModels": [
     "grok-build/grok-4.6",
     "openai-codex/gpt-5.6-luna",
     "openai-codex/gpt-5.6-sol",
-    "cursor/fable-5@300k",
-    "cursor/opus-5@300k",
-    "opencode/deepseek-v4-flash-free",
-    "cursor/gpt-5.6-sol@272k",
-    "cursor/gpt-5.6-luna@272k"
+    "openai-codex/gpt-6-astra"
   ],
   "compaction": {
     "enabled": true

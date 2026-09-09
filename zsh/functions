@@ -95,7 +95,7 @@ function gwtr() {
 
 function hwt() {
   emulate -L zsh
-  local name pane2 pane3 response worktree_dir
+  local name pane2 pane3 response worktree_dir root_pane
 
   if (( $# != 1 )); then
     print -u2 'usage: hwt <name>'
@@ -107,12 +107,11 @@ function hwt() {
   fi
 
   name=$1
-  herdr tab rename "$HERDR_TAB_ID" "$name" >/dev/null || return
+  response=$(herdr worktree create --branch "$name" --label "$name" --focus) || return
+  root_pane=$(print -r -- "$response" | jq -er '.result.root_pane.pane_id') || return
+  worktree_dir=$(print -r -- "$response" | jq -er '.result.worktree.path') || return
 
-  wt switch --create --no-hooks "$name" || return
-  worktree_dir=$PWD
-
-  response=$(herdr pane split --current --direction down --ratio 0.70 \
+  response=$(herdr pane split --pane "$root_pane" --direction down --ratio 0.70 \
     --cwd "$worktree_dir" --no-focus) || return
   pane2=$(print -r -- "$response" | jq -er '.result.pane.pane_id') || return
   herdr pane send-text "$pane2" 'wt run' >/dev/null || return
@@ -125,5 +124,5 @@ function hwt() {
     'wt hook pre-start --foreground && wt hook post-start --foreground' \
     >/dev/null || return
 
-  pi
+  herdr pane run "$root_pane" pi >/dev/null || return
 }
