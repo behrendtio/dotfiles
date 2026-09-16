@@ -35,6 +35,7 @@ __git_files () {
 
 # Huge history size
 export HISTSIZE=4096
+export HISTFILE="$HOME/.zsh_history"
 
 # Source aliases and functions
 source $HOME/.dotfiles/zsh/aliases
