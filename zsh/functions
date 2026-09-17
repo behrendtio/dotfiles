@@ -107,7 +107,8 @@ function hwt() {
   fi
 
   name=$1
-  response=$(herdr worktree create --branch "$name" --label "$name" --focus) || return
+  git fetch origin master || return
+  response=$(herdr worktree create --branch "$name" --base origin/master --label "$name" --focus) || return
   root_pane=$(print -r -- "$response" | jq -er '.result.root_pane.pane_id') || return
   worktree_dir=$(print -r -- "$response" | jq -er '.result.worktree.path') || return
 

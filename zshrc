@@ -87,5 +87,10 @@ command_not_found_handler() {
 
 eval "$(mise activate zsh)"
 
+# Worktrunk
+if command -v wt >/dev/null 2>&1; then eval "$(command wt config shell init zsh)"; fi
+alias wtc='wt switch --create'
+alias wtr='wt remove'
+
 # bun completions
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"

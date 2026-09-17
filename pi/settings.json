@@ -33,7 +33,7 @@
     "npm:codex-computer-use-mcp"
   ],
   "defaultProvider": "openai-codex",
-  "defaultModel": "grok-4.6",
+  "defaultModel": "gpt-5.6-sol",
   "hideThinkingBlock": true,
   "editorPaddingX": 1,
   "outputPad": 1,
@@ -44,7 +44,7 @@
   "quietStartup": true,
   "collapseChangelog": true,
   "defaultProjectTrust": "always",
-  "defaultThinkingLevel": "xhigh",
+  "defaultThinkingLevel": "medium",
   "enabledModels": [
     "grok-build/grok-4.6",
     "openai-codex/gpt-5.6-luna",
