@@ -2,38 +2,18 @@
   "lastChangelogVersion": "0.84.4",
   "theme": "catppuccin-latte/catppuccin-mocha",
   "packages": [
-    {
-      "source": "../../Code/pi-statusbar-mario",
-      "extensions": [
-        "src/index.ts"
-      ]
-    },
-    {
-      "source": "npm:pi-pr-status",
-      "extensions": []
-    },
+    "~/Code/pi-statusbar-mario",
     "npm:pi-xai",
     "npm:pi-mcp-adapter",
     "git:github.com/otahontas/pi-coding-agent-catppuccin",
-    "npm:@juicesharp/rpiv-ask-user-question",
     "npm:pi-autoresearch",
-    "npm:@narumitw/pi-btw",
     "npm:@zigai/pi-mention-skill",
-    "npm:pi-chrome",
-    {
-      "source": "npm:@adrianapan/pikit",
-      "extensions": [
-        "agent/extensions/styled-outputs/index.ts",
-        "agent/extensions/chat-input/index.ts"
-      ]
-    },
     "npm:pi-web-access",
-    "npm:pi-subagents",
     "git:github.com/algal/pi-openai-server-compaction",
-    "npm:codex-computer-use-mcp"
+    "git:github.com/DietrichGebert/ponytail"
   ],
   "defaultProvider": "openai-codex",
-  "defaultModel": "gpt-5.6-sol",
+  "defaultModel": "gpt-6.1-sol",
   "hideThinkingBlock": true,
   "editorPaddingX": 1,
   "outputPad": 1,
@@ -46,10 +26,10 @@
   "defaultProjectTrust": "always",
   "defaultThinkingLevel": "medium",
   "enabledModels": [
-    "grok-build/grok-4.6",
+    "openai-codex/gpt-6.1-sol",
+    "openai-codex/gpt-6-astra",
     "openai-codex/gpt-5.6-luna",
-    "openai-codex/gpt-5.6-sol",
-    "openai-codex/gpt-6-astra"
+    "grok-build/grok-4.6"
   ],
   "compaction": {
     "enabled": true
