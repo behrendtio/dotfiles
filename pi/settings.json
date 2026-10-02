@@ -3,7 +3,7 @@
   "theme": "catppuccin-latte/catppuccin-mocha",
   "packages": [
     "~/Code/pi-statusbar-mario",
-    "npm:pi-xai",
+    "npm:pi-xai-oauth",
     "npm:pi-mcp-adapter",
     "git:github.com/otahontas/pi-coding-agent-catppuccin",
     "npm:pi-autoresearch",
@@ -29,7 +29,7 @@
     "openai-codex/gpt-6.1-sol",
     "openai-codex/gpt-6-astra",
     "openai-codex/gpt-5.6-luna",
-    "grok-build/grok-4.6"
+    "xai-auth/grok-4.7"
   ],
   "compaction": {
     "enabled": true
