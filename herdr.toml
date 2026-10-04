@@ -1,0 +1,58 @@
+onboarding = false
+
+[keys]
+#previous_tab = "cmd+shift+["
+#next_tab = "cmd+shift+]"
+previous_workspace = "cmd+shift+["
+next_workspace = "cmd+shift+]"
+previous_agent = "cmd+["
+next_agent = "cmd+]"
+split_vertical = "prefix+t"
+split_horizontal = 'prefix+v'
+focus_pane_left = "cmd+shift+h"
+focus_pane_down = "cmd+shift+j"
+focus_pane_up = "cmd+shift+k"
+focus_pane_right = "cmd+shift+l"
+close_pane = "cmd+shift+x"
+
+[ui]
+status_indicators = "symbols"
+agent_panel_sort = "spaces"
+show_agent_labels_on_pane_borders = false
+prompt_new_tab_name = false
+pane_borders = true
+pane_gaps = true
+pane_outer_borders = true
+pane_scrollbars = false
+hide_tab_bar_when_single_tab = true
+
+[ui.sidebar.agents]
+row_gap = 1
+rows = [
+  [
+    "state_icon",
+    { token = "workspace", bold = false, dim = false },
+    { token = "tab", bold = false, dim = false },
+  ],
+  ["state_text", "agent"],
+  ["$pr"]
+]
+
+[ui.sidebar.spaces]
+row_gap = 0
+rows = [
+  ["workspace", "git_status"],
+]
+
+[ui.toast]
+delivery = "terminal"
+
+[ui.sound]
+enabled = false
+#done_path = "sounds/conductor-default-chime.mp3"
+
+[theme]
+name = "catppuccin-latte"
+auto_switch = true
+light_name = "catppuccin-latte"
+dark_name = "catppuccin-mocha"

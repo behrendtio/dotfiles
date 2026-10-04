@@ -15,6 +15,8 @@ install:
 	@mkdir -p ~/.config/opencode
 	@ln -fs $(BASEDIR)/opencode.json ~/.config/opencode/opencode.json
 	@ln -fs $(BASEDIR)/opencode_tui.json ~/.config/opencode/tui.json
+	@mkdir -p ~/.config/herdr
+	@ln -fs $(BASEDIR)/herdr.toml ~/.config/herdr/config.toml
 	@mkdir -p ~/.config/hunk
 	@ln -fs $(BASEDIR)/hunk/config.toml ~/.config/hunk/config.toml
 	@mkdir -p ~/.pi/agent
